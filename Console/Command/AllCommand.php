@@ -27,7 +27,7 @@ class AllCommand extends CommandAbstract
      * @param OutputInterface $output
      * @return int
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->cacheBust->bustAll();
         $output->writeln('<info>All URLs cache busted successfully.</info>');

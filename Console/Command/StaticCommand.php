@@ -27,7 +27,7 @@ class StaticCommand extends CommandAbstract
      * @param OutputInterface $output
      * @return int
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->cacheBust->bustStatic();
         $output->writeln('<info>Static URLs cache busted successfully.</info>');
