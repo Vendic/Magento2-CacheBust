@@ -27,7 +27,7 @@ class MediaCommand extends CommandAbstract
      * @param OutputInterface $output
      * @return int
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->cacheBust->bustMedia();
         $output->writeln('<info>Media URLs cache busted successfully.</info>');
